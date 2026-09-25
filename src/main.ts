@@ -26,7 +26,7 @@ function getStorage(): StorageLike {
 
 async function fetchPattern(): Promise<ObstaclePattern | undefined> {
   try {
-    const res = await fetch('/patterns/default.json');
+    const res = await fetch('patterns/default.json');
     if (!res.ok) return undefined;
     return (await res.json()) as ObstaclePattern;
   } catch {

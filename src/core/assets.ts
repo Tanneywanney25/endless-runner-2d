@@ -15,20 +15,20 @@ export async function loadImages<K extends string>(sources: Record<K, string>): 
 }
 
 export const spriteSources = {
-  trex1: '/assets/trex1.png',
-  trex3: '/assets/trex3.png',
-  trex4: '/assets/trex4.png',
-  trexCollided: '/assets/trex_collided.png',
-  ground: '/assets/ground2.png',
-  cloud: '/assets/cloud.png',
-  gameOver: '/assets/gameOver.png',
-  restart: '/assets/restart.png',
-  obstacle1: '/assets/obstacle1.png',
-  obstacle2: '/assets/obstacle2.png',
-  obstacle3: '/assets/obstacle3.png',
-  obstacle4: '/assets/obstacle4.png',
-  obstacle5: '/assets/obstacle5.png',
-  obstacle6: '/assets/obstacle6.png',
+  trex1: 'assets/trex1.png',
+  trex3: 'assets/trex3.png',
+  trex4: 'assets/trex4.png',
+  trexCollided: 'assets/trex_collided.png',
+  ground: 'assets/ground2.png',
+  cloud: 'assets/cloud.png',
+  gameOver: 'assets/gameOver.png',
+  restart: 'assets/restart.png',
+  obstacle1: 'assets/obstacle1.png',
+  obstacle2: 'assets/obstacle2.png',
+  obstacle3: 'assets/obstacle3.png',
+  obstacle4: 'assets/obstacle4.png',
+  obstacle5: 'assets/obstacle5.png',
+  obstacle6: 'assets/obstacle6.png',
 } as const;
 
 export type SpriteKey = keyof typeof spriteSources;
