@@ -13,7 +13,8 @@ export class ScoreTracker {
   constructor(private readonly cfg: GameConfig) {}
 
   get score(): number {
-    return Math.floor(this.accumulated);
+    // Epsilon absorbs float error from summing many small dt slices (60 × 1/60 < 1).
+    return Math.floor(this.accumulated + 1e-9);
   }
 
   tick(dt: number): void {
