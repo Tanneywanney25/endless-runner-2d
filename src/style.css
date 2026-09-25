@@ -1,0 +1,106 @@
+:root {
+  --bg: #f7f7f7;
+  --fg: #202124;
+  --panel-bg: #ffffff;
+  --accent: #535353;
+  --border: #d0d0d0;
+}
+
+body.night {
+  --bg: #1b1d21;
+  --fg: #e8eaed;
+  --panel-bg: #26282d;
+  --accent: #bdc1c6;
+  --border: #3c4043;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+  transition: background 0.3s ease;
+}
+
+#app {
+  width: min(680px, 100%);
+}
+
+#hud {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-variant-numeric: tabular-nums;
+  font-size: 14px;
+  padding: 8px 4px;
+}
+
+#hud button {
+  margin-left: auto;
+  background: var(--panel-bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+#stage {
+  position: relative;
+}
+
+#game {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  image-rendering: pixelated;
+}
+
+#settings-panel {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 230px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.12);
+}
+
+#settings-panel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#settings-panel input[type='range'] {
+  width: 100%;
+}
+
+#scoreboard {
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+#scoreboard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#scoreboard th,
+#scoreboard td {
+  text-align: left;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
+}
